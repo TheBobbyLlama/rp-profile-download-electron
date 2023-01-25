@@ -1,5 +1,6 @@
 const { app, shell, Menu, Tray } = require("electron");
-const findProcess = require('find-process');
+const findProcess = require("find-process");
+const path = require("path");
 
 const { loadConfig, saveConfig } = require("./src/config");
 const showNotification = require("./src/notify");
@@ -20,7 +21,7 @@ let updateTimer = null;
 app.whenReady().then(() => {
 	config = loadConfig();
 
-	statusIcon = new Tray ("./images/icon-small.png");
+	statusIcon = new Tray (path.join(__dirname, "/images/icon-small.png"));
 	statusIcon.setToolTip(statusName);
 
 	statusContext = Menu.buildFromTemplate([
