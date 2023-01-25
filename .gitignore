@@ -1,6 +1,7 @@
 # Application specific
 *.lua
 config.json
+images/thumbs/
 
 # Logs
 logs

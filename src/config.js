@@ -1,4 +1,5 @@
 const fs = require("node:fs");
+const path = require("path");
 const { app, dialog } = require("electron");
 const createDesktopShortcut = require("create-desktop-shortcuts");
 
@@ -22,7 +23,7 @@ const loadConfig = () => {
 				title: "First Time Setup",
 				message: "Thank you for downloading the RP Profile Viewer addon!  This downloader program will need to be used to keep player profile information up to date.\n\nWould you like to place a shortcut on your desktop?",
 				buttons: [ "Yes", "No" ],
-				icon: "./images/icon.png",
+				icon: path.join(__dirname, "/images/icon.png"),
 			}).then((result) => {
 				if (result.response === 0) {
 					if (!createDesktopShortcut({

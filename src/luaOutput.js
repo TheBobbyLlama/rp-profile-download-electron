@@ -1,6 +1,7 @@
 const fs = require("node:fs");
+const path = require("path");
 
-const outputPath = "./RPProfileData.lua";
+const outputPath = path.join(__dirname, "/RPProfileData.lua");
 
 const alignmentMap = {
 	ALIGNMENT_LG: "Lawful Good",

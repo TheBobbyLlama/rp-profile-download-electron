@@ -1,13 +1,15 @@
 const fs = require("node:fs");
+const path = require("path");
 const { net } = require("electron");
 const Jimp = require("jimp");
 const dxt = require("silent-dxt-js");
 const { constants } = require("node:buffer");
-const { hasUncaughtExceptionCaptureCallback } = require("node:process");
 
 const showNotification = require("./notify");
 
-const imagePath = "../images/thumbs/";
+const imagePath = path.normalize(path.join(__dirname, "/../images/thumbs/"));
+
+console.log(imagePath);
 
 const DDS_FILE_MAGIC = 0x20534444;
 const DDS_HEADER_FLAGS = 0x81007; // DDSD_CAPS | DDSD_HEIGHT | DDSD_WIDTH | DDSD_PIXELFORMAT | DDSD_LINEARSIZE
