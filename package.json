@@ -1,0 +1,30 @@
+{
+  "name": "profile-download-new",
+  "version": "1.0.0",
+  "description": "This is a program that is used by the RP Profile Viewer addon for The Elder Scrolls Online.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make-win": "electron-forge make --arch x64 --platform win32",
+    "make-mac": "electron-forge make --arch arm64 --platform darwin"
+  },
+  "keywords": [],
+  "author": "TheBobbyLlama",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-deb": "^6.0.4",
+    "@electron-forge/maker-rpm": "^6.0.4",
+    "@electron-forge/maker-squirrel": "^6.0.4",
+    "@electron-forge/maker-zip": "^6.0.4",
+    "electron": "^22.0.0"
+  },
+  "dependencies": {
+    "create-desktop-shortcuts": "^1.10.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "find-process": "^1.4.7",
+    "jimp": "^0.16.2",
+    "silent-dxt-js": "^0.0.3"
+  }
+}
